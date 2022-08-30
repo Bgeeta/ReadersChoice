@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block content %}
+    Hi {{ user.username }}!
+     <br>Email: {{ user.email }}<br>
+Year :
+{{ user.year }}
+<small class="text-muted">
+    <a href="{% url 'edit-profile' %}">Edit details</a>
+</small>
+{% endblock content %}
