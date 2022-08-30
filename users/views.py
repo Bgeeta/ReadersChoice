@@ -30,4 +30,4 @@ def edit_profile(request):
             return redirect('profile')
     else:
         form = CustomUserChangeForm(instance=request.user)
-    return  render(request, 'users/edit_profile.html', {'form': form})
+    return render(request, 'users/edit_profile.html', {'form': form})
