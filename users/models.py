@@ -26,7 +26,7 @@ class CustomUser(AbstractUser):
     year = models.IntegerField(_('year'))
     EMAIL_FIELD = "email"
     USERNAME_FIELD = "username"
-    REQUIRED_FIELDS = ["email"]
+    REQUIRED_FIELDS = ["email", "year"]
 
     objects = CustomUserManager()
 
