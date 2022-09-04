@@ -16,9 +16,11 @@ def register(request):
         form = CustomUserCreationForm()
     return render(request, 'users/register.html', {'form': form})
 
+
 @login_required
 def profile(request):
     return render(request, "users/profile.html")
+
 
 @login_required
 def edit_profile(request):
@@ -30,4 +32,4 @@ def edit_profile(request):
             return redirect('profile')
     else:
         form = CustomUserChangeForm(instance=request.user)
-    return  render(request, 'users/edit_profile.html', {'form': form})
+    return render(request, 'users/edit_profile.html', {'form': form})
